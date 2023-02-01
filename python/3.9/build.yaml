@@ -1,5 +1,5 @@
-image: homeassistant/{arch}-base-python
-shadow_repository: ghcr.io/home-assistant
+image: jethub-jhaos/{arch}-base-python
+shadow_repository: ghcr.io/jethub-jhaos
 build_from:
   aarch64: "homeassistant/aarch64-base:"
   armv7: "homeassistant/armv7-base:"
@@ -7,12 +7,12 @@ build_from:
   amd64: "homeassistant/amd64-base:"
   i386: "homeassistant/i386-base:"
 codenotary:
-  signer: notary@home-assistant.io
-  base_image: notary@home-assistant.io
+  signer: vb@jethome.ru
+  base_image: vb@jethome.ru
 args:
   PYTHON_VERSION: 3.9.14
   PIP_VERSION: 22.3.0
   GPG_KEY: E3FF2839C048B25C084DEBE9B26995E310250568
 labels:
   io.hass.base.name: python
-  org.opencontainers.image.source: https://github.com/home-assistant/docker-base
+  org.opencontainers.image.source: https://github.com/jethub-jhaos/docker-base

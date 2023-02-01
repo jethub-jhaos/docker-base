@@ -1,15 +1,15 @@
-image: homeassistant/{arch}-base-ubuntu
-shadow_repository: ghcr.io/home-assistant
+image: jethub-jhaos/{arch}-base-ubuntu
+shadow_repository: ghcr.io/jethub-jhaos
 build_from:
   aarch64: "arm64v8/ubuntu:"
   armv7: "arm32v7/ubuntu:"
   amd64: "ubuntu:"
 codenotary:
-  signer: notary@home-assistant.io
+  signer: vb@jethome.ru
 args:
   BASHIO_VERSION: 0.14.3
   TEMPIO_VERSION: 2021.09.0
   S6_OVERLAY_VERSION: 3.1.2.1
 labels:
   io.hass.base.name: ubuntu
-  org.opencontainers.image.source: https://github.com/home-assistant/docker-base
+  org.opencontainers.image.source: https://github.com/jethub-jhaos/docker-base

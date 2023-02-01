@@ -1,5 +1,5 @@
-image: homeassistant/{arch}-base
-shadow_repository: ghcr.io/home-assistant
+image: jethub-jhaos/{arch}-base
+shadow_repository: ghcr.io/jethub-jhaos
 build_from:
   aarch64: "arm64v8/alpine:"
   armv7: "arm32v7/alpine:"
@@ -7,7 +7,7 @@ build_from:
   amd64: "alpine:"
   i386: "i386/alpine:"
 codenotary:
-  signer: notary@home-assistant.io
+  signer: vb@jethome.ru
 args:
   BASHIO_VERSION: 0.14.3
   TEMPIO_VERSION: 2021.09.0
@@ -15,4 +15,4 @@ args:
   JEMALLOC_VERSION: 5.3.0
 labels:
   io.hass.base.name: alpine
-  org.opencontainers.image.source: https://github.com/home-assistant/docker-base
+  org.opencontainers.image.source: https://github.com/jethub-jhaos/docker-base
