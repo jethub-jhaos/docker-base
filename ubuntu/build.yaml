@@ -1,5 +1,5 @@
-image: jethub-jhaos/{arch}-base-ubuntu
-shadow_repository: ghcr.io/jethub-jhaos
+image: jethubjhaos/{arch}-base-ubuntu
+shadow_repository: ghcr.io/jethubjhaos
 build_from:
   aarch64: "arm64v8/ubuntu:"
   armv7: "arm32v7/ubuntu:"
@@ -12,4 +12,4 @@ args:
   S6_OVERLAY_VERSION: 3.1.2.1
 labels:
   io.hass.base.name: ubuntu
-  org.opencontainers.image.source: https://github.com/jethub-jhaos/docker-base
+  org.opencontainers.image.source: https://github.com/jethubjhaos/docker-base

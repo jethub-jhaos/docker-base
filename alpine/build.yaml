@@ -1,5 +1,5 @@
-image: jethub-jhaos/{arch}-base
-shadow_repository: ghcr.io/jethub-jhaos
+image: jethubjhaos/{arch}-base
+shadow_repository: ghcr.io/jethubjhaos
 build_from:
   aarch64: "arm64v8/alpine:"
   armv7: "arm32v7/alpine:"
@@ -15,4 +15,4 @@ args:
   JEMALLOC_VERSION: 5.3.0
 labels:
   io.hass.base.name: alpine
-  org.opencontainers.image.source: https://github.com/jethub-jhaos/docker-base
+  org.opencontainers.image.source: https://github.com/jethubjhaos/docker-base
