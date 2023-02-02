@@ -1,4 +1,4 @@
-name: Build base images
+name: JH Build base images
 
 on:
   pull_request:
