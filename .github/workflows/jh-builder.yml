@@ -8,7 +8,7 @@ on:
 
 env:
   BUILD_TYPE: base
-  ALPINE_LATEST: "3.16"
+  ALPINE_LATEST: "3.17"
   DEBIAN_LATEST: "bullseye"
   UBUNTU_LATEST: "20.4"
   RASPBIAN_LATEST: "bullseye"
@@ -67,7 +67,7 @@ jobs:
     strategy:
       matrix:
         arch: ${{ fromJson(needs.init.outputs.architectures_alpine) }}
-        version: ["3.13", "3.14", "3.15", "3.16"] 
+        version: ["3.14", "3.15", "3.16", "3.17"] 
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3
@@ -97,7 +97,7 @@ jobs:
         fi
     
     - name: Build base image
-      uses: jethubjhaos/builder@2022.11.0
+      uses: jethubjhaos/builder@2023.03.0-jethub
       with:
         args: |
           $BUILD_ARGS \
@@ -145,7 +145,7 @@ jobs:
         fi
     
     - name: Build base image
-      uses: jethubjhaos/builder@2022.11.0-jethub
+      uses: jethubjhaos/builder@2023.03.0-jethub
       with:
         args: |
           $BUILD_ARGS \
@@ -194,7 +194,7 @@ jobs:
         fi
     
     - name: Build base image
-      uses: jethubjhaos/builder@2022.11.0-jethub
+      uses: jethubjhaos/builder@2023.03.0-jethub
       with:
         args: |
           $BUILD_ARGS \
@@ -242,7 +242,7 @@ jobs:
         fi
     
     - name: Build base image
-      uses: jethubjhaos/builder@2022.11.0-jethub
+      uses: jethubjhaos/builder@2023.03.0-jethub
       with:
         args: |
           $BUILD_ARGS \
@@ -262,7 +262,7 @@ jobs:
       matrix:
         arch: ${{ fromJson(needs.init.outputs.architectures_alpine) }}
         version: ["3.14", "3.15", "3.16"]
-        python: ["3.8", "3.9", "3.10"]
+        python: ["3.9", "3.10", "3.11"]
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3
@@ -292,7 +292,7 @@ jobs:
         fi
     
     - name: Build base image
-      uses: jethubjhaos/builder@2022.11.0-jethub
+      uses: jethubjhaos/builder@2023.03.0-jethub
       with:
         args: |
           $BUILD_ARGS \
