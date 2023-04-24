@@ -1,13 +1,13 @@
-image: homeassistant/{arch}-base-raspbian
-shadow_repository: ghcr.io/home-assistant
+image: jethubjhaos/{arch}-base-raspbian
+shadow_repository: ghcr.io/jethubjhaos
 build_from:
   armhf: "tianon/raspbian:"
 codenotary:
-  signer: notary@home-assistant.io
+  signer: vb@jethome.ru
 args:
   BASHIO_VERSION: 0.14.3
   TEMPIO_VERSION: 2021.09.0
   S6_OVERLAY_VERSION: 3.1.3.0
 labels:
   io.hass.base.name: raspbian
-  org.opencontainers.image.source: https://github.com/home-assistant/docker-base
+  org.opencontainers.image.source: https://github.com/jethubjhaos/docker-base
